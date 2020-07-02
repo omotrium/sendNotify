@@ -30,14 +30,12 @@ public class Test {
     public Response sendEmail(@RequestBody User user) {
 
 
-        Response response = sendSms.sendSmsToUser(user);
-        if (response != null){
-
-            Response response1 = mailAgent.generateAndSendEmail(user);
-            System.out.println("myrespo"+response1);
+        Response response1 = mailAgent.generateAndSendEmail(user);
+        if (response1.getResponseCode().equals("00")) {
+            Response response = sendSms.sendSmsToUser(user);
+            return response;
         }
 
-
-        return response;
+        return response1;
     }
 }

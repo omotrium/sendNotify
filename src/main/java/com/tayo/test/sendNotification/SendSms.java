@@ -31,7 +31,6 @@ public class SendSms {
         LOGGER.debug("++++ requestEntity ==> " + requestEntity + " ++++");
 
         String url = environment.getProperty("smsUrl") + "to=" + user.getPhoneNumber() + "&body=" + user.getHtmlTemplate();
-        //https://www.bulksmsnigeria.com/api/v1/sms/create?api_token=xXi9yKhlJphJwgsXYqhH5BPtdN4cRVw3NRrSfgLbFFcjA3e3YXIyDoZEZJG4&from=BulkSMS.ng&to=2348062743619&body=Welcome&dnd=2
 
         LOGGER.info("myurl" + url);
 
