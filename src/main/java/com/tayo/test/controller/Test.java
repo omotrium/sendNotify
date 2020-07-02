@@ -28,13 +28,15 @@ public class Test {
 
     @RequestMapping(value = "/sendEmail", method = RequestMethod.POST)
     public Response sendEmail(@RequestBody User user) {
-        Response response = mailAgent.generateAndSendEmail(user);
-        //if (response != null){
 
-            //Response response1 = sendSms.sendSmsToUser(user);
-            System.out.println("myrespo"+response);
-       // }
-       // Response response1 = sendSms.sendSmsToUser(user);
+
+        Response response = sendSms.sendSmsToUser(user);
+        if (response != null){
+
+            Response response1 = mailAgent.generateAndSendEmail(user);
+            System.out.println("myrespo"+response1);
+        }
+
 
         return response;
     }
