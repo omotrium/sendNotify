@@ -3,10 +3,10 @@ Send mail and sms using gmail smtp and bulksms api
 
 #payload
 {
-    "receiver": "omo4adex@gmail.com",
+    "receiver": "ttt@gmail.com",
     "subject": "notify",
     "htmlTemplate": "welcome to Nigeria",
-    "phoneNumber": "08062743619"
+    "phoneNumber": "080********"
 }
 
 
